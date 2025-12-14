@@ -1,0 +1,7 @@
+streamlit
+pandas
+plotly
+numpy
+dash
+dash-bootstrap-components
+pytest

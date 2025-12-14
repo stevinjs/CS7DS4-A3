@@ -1,0 +1,128 @@
+:root {
+    /* Background layers */
+    --bg-primary: #0a0e1a;
+    /* Deep navy-black (main background) */
+    --bg-secondary: #141824;
+    /* Slightly lighter (panels, cards) */
+    --bg-tertiary: #1e2433;
+    /* Elevated components (spine, modals) */
+
+    /* Text */
+    --text-primary: #e8eaed;
+    /* Off-white (headings, labels) */
+    --text-secondary: #9aa0b1;
+    /* Muted gray (body text, axes) */
+    --text-tertiary: #6b7280;
+    /* Very muted (footnotes, helpers) */
+
+    /* Accent colors (functional) */
+    --accent-upper-arm: #10b981;
+    /* Emerald green (assets, wealth, S&P) */
+    --accent-lower-arm: #ef4444;
+    /* Bright red (labor stress, delinquency) */
+    --accent-neutral: #6366f1;
+    /* Indigo (unemployment, neutral metrics) */
+    --accent-warning: #f59e0b;
+    /* Amber (tariffs, inflation, shocks) */
+
+    /* Event categories */
+    --event-fed: #3b82f6;
+    /* Blue (Powell, rate cuts) */
+    --event-tariff: #dc2626;
+    /* Red (Trump tariffs) */
+    --event-shutdown: #f97316;
+    /* Orange (data blackout, government shutdown) */
+    --event-market: #8b5cf6;
+    /* Purple (S&P milestones, shocks) */
+
+    /* UI elements */
+    --border-subtle: #2d3748;
+    /* Panel borders */
+    --border-emphasis: #4b5563;
+    /* Active/hover borders */
+    --shadow: rgba(0, 0, 0, 0.5);
+    /* Drop shadows */
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Components */
+.k-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.k-header {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 2rem;
+}
+
+.k-spine {
+    background-color: var(--bg-tertiary);
+    border-left: 1px solid var(--border-emphasis);
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 250px;
+}
+
+.event-item:hover {
+    background-color: rgba(30, 36, 51, 0.9) !important;
+    transform: translateX(4px);
+}
+.event-item {
+    transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+/* Chart Grid helpers for consistent spacing and responsive stacking */
+.chart-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.chart-item {
+    padding: 0.5rem;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-emphasis);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .chart-grid {
+        flex-direction: column !important;
+    }
+    .chart-item {
+        width: 100% !important;
+    }
+    .k-spine {
+        width: 100% !important;
+        height: 300px !important;
+        position: relative;
+    }
+}
