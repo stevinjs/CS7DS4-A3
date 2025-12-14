@@ -31,7 +31,6 @@ def load_and_process_data():
 
     # Now rebased (normalized) copy
     df_rebased = rebase_series(df_raw, data_config.BASELINE)
-    df_rebased.to_csv('debug_rebased.csv')
 
     # Mix in *raw* columns with _RAW suffix to preserve original units for plotting
     for col in df_raw.columns:
@@ -185,5 +184,4 @@ app.layout = dbc.Container([
 
 
 if __name__ == '__main__':
-    # Run slightly different port to differentiate from Streamlit
     app.run(debug=True, port=8050)
