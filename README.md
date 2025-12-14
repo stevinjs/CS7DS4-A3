@@ -2,7 +2,7 @@
 
 # The K‑Shaped Economy
 
-Interactive Dash web app that visualizes the “K‑shaped” post‑2017 US economy using multiple lenses: labor markets, prices and policy, financial stress, and wealth distribution.[1]
+Interactive Dash web app that visualizes the “K‑shaped” post‑2017 US economy using multiple lenses: labor markets, prices and policy, financial stress, and wealth distribution.
 
 ## 1. Project Overview
 
